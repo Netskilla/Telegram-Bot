@@ -1,5 +1,5 @@
 # Telegram-Bot
 
-# You can find it on Telegram by searching @SmellTrainingBot
+You can find it on Telegram by searching @SmellTrainingBot
 
-# Runs on replit.com
+Runs on replit.com
