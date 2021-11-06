@@ -837,7 +837,7 @@ def pinging(update, context):
         return ConversationHandler.END
 
 def main():
-    updater = Updater("1925710739:AAGs3ARdPPScQyUu_LZNjmUbhtUhKWRqhw8", use_context=True)
+    updater = Updater("API_KEY", use_context=True)
 
     dp = updater.dispatcher
 
