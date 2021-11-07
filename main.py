@@ -227,7 +227,7 @@ def json_reminder_list(user):
 # SEND PHOTO 
 
 def sendImage(img_url, message):
-    url = "https://api.telegram.org/bot{}/sendPhoto".format("1925710739:AAGs3ARdPPScQyUu_LZNjmUbhtUhKWRqhw8");
+    url = "https://api.telegram.org/bot{}/sendPhoto".format("API_KEY");
 
     files = {'photo': open('photos/{}'.format(img_url), 'rb')}
     data = {'chat_id' : message.chat.id}
@@ -797,7 +797,7 @@ def feedback(update, context):
 def secret(update, context):
     chat_id = str(update.message.chat.id)
 
-    if chat_id == "890422904" or chat_id == "353412556":
+    if chat_id == "your chat id with bot":
         usernames = json_secret_name()
 
         all_answers = json_special_getter(usernames)
