@@ -221,21 +221,7 @@ def json_reminder_list(user):
             return 0
         else:
             return 1
-
-# SEND PHOTO
-# SEND PHOTO 
-# SEND PHOTO 
-
-def sendImage(img_url, message):
-    url = "https://api.telegram.org/bot{}/sendPhoto".format("API_KEY");
-
-    files = {'photo': open('photos/{}'.format(img_url), 'rb')}
-    data = {'chat_id' : message.chat.id}
-
-    r = requests.post(url, files=files, data=data)
-    print(r.status_code, r.reason, r.content)
- 
-
+        
 # TIME ZONE
 # TIME ZONE
 # TIME ZONE
@@ -455,6 +441,19 @@ def reminder_stop(update, context):
                               '\n\nНапоминание отменено', reply_markup=ReplyKeyboardRemove(), parse_mode="markdown")
 
     return ConversationHandler.END
+
+# SEND PHOTO
+# SEND PHOTO 
+# SEND PHOTO 
+
+def sendImage(img_url, message):
+    url = "https://api.telegram.org/bot{}/sendPhoto".format("API_KEY");
+
+    files = {'photo': open('photos/{}'.format(img_url), 'rb')}
+    data = {'chat_id' : message.chat.id}
+
+    r = requests.post(url, files=files, data=data)
+    print(r.status_code, r.reason, r.content)
 
 # QUESTIONS
 # QUESTIONS
